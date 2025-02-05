@@ -14,6 +14,9 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/api/employees', employeeRoutes);
+app.get('/', (req, res) => {
+    res.send('Welcome to the Employee leave and holiday Management API');
+});
 app.listen(3000, () => {
     console.log('server running');
 });
